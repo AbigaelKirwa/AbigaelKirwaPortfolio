@@ -169,7 +169,7 @@ section#home .main_home .main_pic img{
 section#projects{
     padding: 3% 5%;
 }
-section#projects .projects_heading h1, section#skills .skills_heading h1{
+section#projects .projects_heading h1, section#skills .skills_heading h1, section#resume .resume_heading h1{
     color: #BD9400;
     text-align: center;
     font-size: 70px;
@@ -197,7 +197,7 @@ section#projects .main_images_projects .image_div img{
     }
 }
 @media only screen and (max-width: 570px) {
-    section#projects .projects_heading h1, section#skills .skills_heading h1{
+    section#projects .projects_heading h1, section#skills .skills_heading h1, section#resume .resume_heading h1{
         font-size: 50px;
     }
     section#projects{
@@ -305,4 +305,41 @@ section#skills .languages .language_stats .current{
         grid-template-columns: auto;
         grid-row-gap:20%;
     }
+}
+/* this is code for the resume section */
+section#resume {
+    padding: 5% 10%;
+}
+section#resume .resume_main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 5%;
+    color: #FFFFFF;
+}
+section#resume .resume_line {
+    width: 10px;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+section#resume .resume_main h1{
+    font-size: 30px;
+}
+section#resume .resume_main p{
+    font-size: 17px;
+    padding-top: 3%;
+    line-height: 30px;
+}
+section#resume .resume_main .resume_left_main .resume_left{
+    padding-bottom: 15%;
+}
+section#resume .resume_main .resume_left_main{
+    padding-right: 5%;
+}
+section#resume .resume_main .resume_right_main{
+    padding-top: 15%;
+    padding-left: 10%;
+}
+section#resume .resume_main .resume_right_main .resume_right{
+    padding-bottom: 15%;
 }
