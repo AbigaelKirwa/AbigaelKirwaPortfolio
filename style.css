@@ -9,7 +9,6 @@ body{
     font-family: 'Inter', sans-serif;
     background-color: #202020;
     overflow-x: hidden;
-    height: 400vh;
 }
 
 section#home{
@@ -262,4 +261,48 @@ section#skills .languages .language_stats .current{
     opacity: 100%;
     margin-top: 2%;
     border-radius: 20px;
+}
+/* making the skills section responsive */
+@media only screen and (max-width: 1063px) {
+    section#skills .numerical_skills .skill{
+        width: 180px;
+        height: 180px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    section#skills .numerical_skills{
+        grid-template-columns: auto auto ;
+        justify-content: space-between;
+    }
+    section#skills .numerical_skills .skill{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media only screen and (max-width: 737px) {
+    section#skills{
+        margin-top: 15%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    section#skills{
+        margin-top: 55%;
+    }
+}
+@media only screen and (max-width: 689px) {
+    section#skills .numerical_skills{
+        grid-template-columns: auto;
+        justify-content: space-between;
+        justify-content: center;
+    }
+    section#skills .numerical_skills .skill{
+        width: 300px;
+        height: 300px;
+        padding-top: 5%;
+    }
+    
+    section#skills .languages{
+        grid-template-columns: auto;
+        grid-row-gap:20%;
+    }
 }
