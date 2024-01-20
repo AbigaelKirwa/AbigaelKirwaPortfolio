@@ -11,6 +11,10 @@ body{
     overflow-x: hidden;
 }
 
+a, button{
+    cursor: pointer;
+}
+
 section#home{
     width: 100%;
     background-image: url("./assets/images/home_background.png");
@@ -143,11 +147,19 @@ section#home .main_home .main_pic img{
         display: flex;
         flex-direction: column;
     }
+    section#home .main_home .words .home_buttons{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10%;
+
+    }
     section#home .main_home .words .home_buttons button.more{
         margin-right: 0%;
+        width: 100%;
     }
     section#home .main_home .words .home_buttons button.contact{
         margin-top: 10%;
+        width: 100%;
     }    
     section#home .main_home .words h1{
         margin-top: 10%;
@@ -156,13 +168,6 @@ section#home .main_home .main_pic img{
         margin-top: 10%;
     }
     
-}
-@media only screen and (max-width: 400px) {
-    section#home .main_home .words .home_buttons{
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 10%;
-    }
 }
 /* this is code for the project section */
 section#projects{
