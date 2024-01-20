@@ -169,7 +169,7 @@ section#home .main_home .main_pic img{
 section#projects{
     padding: 3% 5%;
 }
-section#projects .projects_heading h1{
+section#projects .projects_heading h1, section#skills .skills_heading h1{
     color: #BD9400;
     text-align: center;
     font-size: 70px;
@@ -197,10 +197,46 @@ section#projects .main_images_projects .image_div img{
     }
 }
 @media only screen and (max-width: 570px) {
-    section#projects .projects_heading h1{
+    section#projects .projects_heading h1, section#skills .skills_heading h1{
         font-size: 50px;
     }
     section#projects{
         padding: 3% 10%;
     }
+}
+/* this is code for the skills section */
+section#skills{
+    padding: 10% 5%;
+}
+
+section#skills .numerical_skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section#skills .numerical_skills .skill{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;  
+    background-size:contain;
+    background-position: center center;
+}
+
+section#skills .numerical_skills .skill{
+    padding-top: 6%;
+}
+
+section#skills .numerical_skills .skill h1{
+    color: #FFFFFF;
+    font-size: 50px;
+}
+
+section#skills .numerical_skills .skill p{
+    color: #FFFFFF;
+    font-size: 20px;
 }
