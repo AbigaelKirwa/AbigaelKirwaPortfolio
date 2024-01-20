@@ -4,6 +4,9 @@
     padding:0;
     margin:0;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     font-family: 'Inter', sans-serif;
@@ -184,6 +187,13 @@ section#projects .main_images_projects{
     grid-column-gap: 7%;
     grid-row-gap:15%;
     padding-top: 5%;
+}
+section#projects .main_images_projects .image_div {
+    transition: transform 0.3s ease-in-out;
+}
+
+section#projects .main_images_projects .image_div:hover {
+    transform: scale(1.1); 
 }
 section#projects .main_images_projects .image_div img{
     width: 100%;
