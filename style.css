@@ -134,24 +134,10 @@ section#home .main_home .main_pic img{
         align-items: center;
         justify-content: center;
     }
-    section#home .links ul li a{
-    }
 }
 @media only screen and (max-width: 470px) {
     section#home .main_home .words h1{
         font-size: 40px;
-    }
-    
-}
-@media only screen and (max-width: 400px) {
-    section#home .main_home .words .home_buttons{
-        display: flex;
-        flex-direction: column;
-    }
-    section#home .main_home .words .home_buttons{
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 10%;
     }
     section#home .main_home .words .home_buttons button.more{
         margin-right: 0%;
@@ -165,5 +151,56 @@ section#home .main_home .main_pic img{
     }
     section#home .main_home .words p{
         margin-top: 10%;
+    }
+    
+}
+@media only screen and (max-width: 400px) {
+    section#home .main_home .words .home_buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    section#home .main_home .words .home_buttons{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10%;
+    }
+}
+/* this is code for the project section */
+section#projects{
+    padding: 3% 5%;
+}
+section#projects .projects_heading h1{
+    color: #BD9400;
+    text-align: center;
+    font-size: 70px;
+}
+section#projects .main_images_projects{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 7%;
+    grid-row-gap:15%;
+    padding-top: 5%;
+}
+section#projects .main_images_projects .image_div img{
+    width: 100%;
+    height: 110%;
+    border: 5px solid;
+    border-color: #BD9400;
+}
+/* making the projects section responsive */
+@media only screen and (max-width: 700px) {
+    section#projects .main_images_projects{
+        display: grid;
+        grid-template-columns: auto;
+        grid-row-gap:10%;
+        padding-top: 10%;
+    }
+}
+@media only screen and (max-width: 570px) {
+    section#projects .projects_heading h1{
+        font-size: 50px;
+    }
+    section#projects{
+        padding: 3% 10%;
     }
 }
