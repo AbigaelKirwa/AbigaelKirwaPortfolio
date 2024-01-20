@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+}
+
+section#home{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./assets/images/home_background.png");
+}
+
+.links{
+    padding-left: 5%;
+    padding-top: 3%;
+    font-family: 'Inter', sans-serif;
+}
+
+.links ul{
+    display: flex;
+    list-style: none;
+}
+
+.links ul li{
+    padding-right: 5%;
+}
+
+.links ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.links ul li a span.home_link{
+    color: #BD9400;
+}
