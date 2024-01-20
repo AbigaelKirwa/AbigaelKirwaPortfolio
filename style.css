@@ -425,3 +425,82 @@ section#resume .resume_main .resume_right_main .resume_right{
         padding-top: 90%;
     }
 }
+/* this is code for the footer section */
+footer{
+    padding: 3%;
+    background-color: #3838377D;
+    display: flex;
+    justify-content: space-between;
+}
+footer .left_links{
+    display: flex;
+    color: #FFFFFF;
+    gap: 40%;
+}
+footer .left_links a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+footer .left_links .left_link h3{
+    padding-bottom: 30px;
+}
+footer .left_links .left_link p{
+    padding-bottom: 20px;
+}
+footer .social_media{
+    display: flex;
+    padding-right: 10%;
+    margin-top: 5%;
+}
+footer .social_media div{
+    padding-right: 40%;
+}
+@media only screen and (max-width: 1004px) {
+    footer .social_media{
+        display: flex;
+        padding-right: 20%;
+        margin-top: 5%;
+    }
+}
+@media only screen and (max-width: 839px) {
+    footer{
+        padding: 3%;
+        flex-direction: column;
+    }
+    footer .left_links{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+    footer .left_links .left_link{
+        padding-bottom: 5%;
+    }
+    footer .left_links .left_link p{
+        text-align: center;
+    }
+    footer .left_links .left_link h3{
+        text-align: center;
+    }
+    footer .social_media{
+        align-items: center;
+        justify-content: center;
+        padding-right: 0;
+        padding-left: 10%;
+    }
+    footer .social_media div{
+        padding-right: 10%;
+    }
+}
+@media only screen and (max-width: 544px) {
+    footer{
+        margin-top: 20%;
+        padding-top: 10%;
+    }
+}
+@media only screen and (max-width: 402px) {
+    footer{
+        margin-top: 40%;
+        padding-top: 20%;
+    }
+}
