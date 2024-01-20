@@ -5,33 +5,91 @@
     margin:0;
 }
 
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #202020;
+    overflow-x: hidden;
+}
+
 section#home{
     width: 100%;
     height: 100vh;
     background-image: url("./assets/images/home_background.png");
 }
 
-.links{
+section#home .links{
     padding-left: 5%;
     padding-top: 3%;
-    font-family: 'Inter', sans-serif;
 }
 
-.links ul{
+section#home .links ul{
     display: flex;
     list-style: none;
 }
 
-.links ul li{
+section#home .links ul li{
     padding-right: 5%;
 }
 
-.links ul li a{
+section#home .links ul li a{
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-.links ul li a span.home_link{
+section#home .links ul li a span.home_link{
     color: #BD9400;
+}
+
+section#home .main_home{
+    display: flex;
+}
+
+section#home .main_home .words{
+    color: #ffffff;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+section#home .main_home .words h1{
+    font-size: 60px;
+    white-space: nowrap;
+}
+
+section#home .main_home .words p{
+    margin-top: 5%;
+    font-size: 20px;
+    color: #FFF;
+    text-align: justify;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+section#home .main_home .words .home_buttons{
+    margin-top: 5%;
+}
+
+section#home .main_home .words .home_buttons button{
+    padding:3% 5%;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+section#home .main_home .words .home_buttons button.more{
+    background-color: #BD9400;
+    margin-right: 5%;
+}
+
+section#home .main_home .words .home_buttons button.contact{
+    background-color: #FFFFFF;
+    color: #1E1E1E;
+}
+
+section#home .main_home .main_pic img{
+    width: 84.6%;
+    margin-top: -70px;
+    float: right;
 }
