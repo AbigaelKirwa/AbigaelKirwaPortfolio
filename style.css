@@ -210,14 +210,14 @@ section#skills{
 }
 
 section#skills .numerical_skills{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     justify-content: space-between;
 }
 
 section#skills .numerical_skills .skill{
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -225,10 +225,7 @@ section#skills .numerical_skills .skill{
     background-repeat: no-repeat;  
     background-size:contain;
     background-position: center center;
-}
-
-section#skills .numerical_skills .skill{
-    padding-top: 6%;
+    padding-top: 25%;
 }
 
 section#skills .numerical_skills .skill h1{
@@ -239,4 +236,73 @@ section#skills .numerical_skills .skill h1{
 section#skills .numerical_skills .skill p{
     color: #FFFFFF;
     font-size: 20px;
+}
+
+section#skills .languages{
+    margin-top: 3%;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap:5%;
+    grid-row-gap:40%;
+}
+
+section#skills .languages .language_stats .overall{
+    width: 100%;
+    height: 20px;
+    background-color: #bd94005a;
+    margin-top: 2%;
+    border-radius: 20px;
+}
+section#skills .languages .language_stats .current{
+    height: 20px;
+    background-color: #BD9400;
+    opacity: 100%;
+    margin-top: 2%;
+    border-radius: 20px;
+}
+/* making the skills section responsive */
+@media only screen and (max-width: 1063px) {
+    section#skills .numerical_skills .skill{
+        width: 180px;
+        height: 180px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    section#skills .numerical_skills{
+        grid-template-columns: auto auto ;
+        justify-content: space-between;
+    }
+    section#skills .numerical_skills .skill{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media only screen and (max-width: 737px) {
+    section#skills{
+        margin-top: 15%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    section#skills{
+        margin-top: 55%;
+    }
+}
+@media only screen and (max-width: 689px) {
+    section#skills .numerical_skills{
+        grid-template-columns: auto;
+        justify-content: space-between;
+        justify-content: center;
+    }
+    section#skills .numerical_skills .skill{
+        width: 300px;
+        height: 300px;
+        padding-top: 5%;
+    }
+    
+    section#skills .languages{
+        grid-template-columns: auto;
+        grid-row-gap:20%;
+    }
 }
