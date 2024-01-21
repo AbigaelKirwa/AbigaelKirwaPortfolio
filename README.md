@@ -26,7 +26,7 @@ Connect with me for collaboration or inquiries:
 Email: abigael.kirwa@strathmore.edu
 
 # How to Use
-Clone the repo: git clone https://github.com/your-username/your-portfolio.git
+Clone the repo: git clone [https://github.com/your-username/your-portfolio.git](https://github.com/AbigaelKirwa/AbigaelKirwaPortfolio.git)
 
 Navigate to the repo: cd your-portfolio
 
