@@ -46,43 +46,54 @@ valueDisplays.forEach(valueDisplay => {
 });
 
 
-//incrementing languages section
 document.addEventListener("DOMContentLoaded", function () {
     // Select all language elements
     let languageElements = document.querySelectorAll(".language");
 
     // Function to animate the loading effect
-    function animateLoading(element) {
-        let overall = element.querySelector(".overall");
-        let current = element.querySelector(".current");
+function animateLoading(element) {
+    let overall = element.querySelector(".overall");
+    let current = element.querySelector(".current");
 
-        // Get the specified percentage from the data-percentage attribute
-        let targetPercentage = parseInt(element.getAttribute("data-percentage"));
+    // Get the specified percentage from the data-percentage attribute
+    let targetPercentage = parseInt(element.getAttribute("data-percentage"));
 
-        // Check if the animation has already been triggered
-        if (element.getAttribute("data-animated") === "true") {
-            return;
-        }
-
-        // Set up an interval to update the current width
-        let currentWidth = 0;
-        let interval = setInterval(function () {
-            // Increment the current width
-            currentWidth++;
-
-            // Update the current width style
-            current.style.width = currentWidth + "%";
-
-            // Check if the current width reaches the target percentage
-            if (currentWidth >= targetPercentage) {
-                // Stop the interval when the target is reached
-                clearInterval(interval);
-
-                // Mark the element as animated
-                element.setAttribute("data-animated", "true");
-            }
-        }, 10); // Adjust the interval time as needed
+    // Check if the animation has already been triggered
+    if (element.getAttribute("data-animated") === "true") {
+        return;
     }
+
+    // Calculate the step increment based on the target percentage and animation duration
+    let animationDuration = 1000; // You can adjust this value
+    let steps = 100; // Number of steps to reach 100%
+    let stepIncrement = targetPercentage / steps;
+
+    // Calculate the duration of each step
+    let stepDuration = animationDuration / steps;
+
+    // Set up an interval to update the current width
+    let currentWidth = 0;
+    let interval = setInterval(function () {
+        // Increment the current width
+        currentWidth += stepIncrement;
+
+        // Update the current width style
+        current.style.width = currentWidth + "%";
+
+        // Check if the current width reaches or exceeds the target percentage
+        if (currentWidth >= targetPercentage) {
+            // Set the width to the exact target percentage to ensure accuracy
+            current.style.width = targetPercentage + "%";
+
+            // Stop the interval when the target is reached
+            clearInterval(interval);
+
+            // Mark the element as animated
+            element.setAttribute("data-animated", "true");
+        }
+    }, stepDuration); // Use the calculated duration for each step
+}
+
 
     // Function to check if an element is in the viewport
     function isInViewport(element) {
@@ -95,13 +106,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to handle scroll events
     function handleScroll() {
+        let allAnimated = true; // Assume all elements have been animated
+
         // Check if each language element is in the viewport
         languageElements.forEach(function (languageElement) {
-            if (isInViewport(languageElement)) {
-                // Trigger the loading effect for visible elements
+            if (!isInViewport(languageElement)) {
+                // If any element is not in the viewport, set the flag to false
+                allAnimated = false;
+            } else {
+                // If the element is in the viewport, trigger the loading effect
                 animateLoading(languageElement);
             }
         });
+
+        // If all elements have been animated, remove the scroll event listener
+        if (allAnimated) {
+            window.removeEventListener("scroll", handleScroll);
+        }
     }
 
     // Attach the handleScroll function to the scroll event
