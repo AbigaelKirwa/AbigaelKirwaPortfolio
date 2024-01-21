@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets//images/icon.png" type="image/x-icon">
     <title>Portfolio</title>
 </head>
 <body>
@@ -56,24 +57,24 @@
         </div>
         <div class="numerical_skills">
             <div class="skill" style="background-image: url(./assets/images/skills_background_one.png)">
-                <h1>10</h1>
+                <h1 class="count" data-val="10">00</h1>
                 <p>Happy Clients</p>
             </div>
             <div class="skill" style="background-image: url(./assets/images/skills_background_two.png)">
-                <h1>6</h1>
+                <h1 class="count" data-val="6">00</h1>
                 <p>Projects</p>
             </div>
             <div class="skill" style="background-image: url(./assets/images/skills_background_three.png)">
-                <h1>5</h1>
+                <h1 class="count" data-val="5">00</h1>
                 <p>Awards</p>
             </div>
             <div class="skill" style="background-image: url(./assets/images/skills_background_four.png)">
-                <h1>8</h1>
+                <h1 class="count" data-val="8">00</h1>
                 <p>Languages</p>
             </div>
         </div>
         <div class="languages">
-            <div class="language">
+            <div class="language" data-percentage="100">
                 <p>HTML</p>
                 <div class="language_stats">
                     <div class="overall">
@@ -81,7 +82,7 @@
                     </div>
                 </div>
             </div>
-            <div class="language">
+            <div class="language" data-percentage="90">
                 <p>CSS</p>
                 <div class="language_stats">
                     <div class="overall">
@@ -89,7 +90,7 @@
                     </div>
                 </div>
             </div>
-            <div class="language">
+            <div class="language" data-percentage="50">
                 <p>JavaScript</p>
                 <div class="language_stats">
                     <div class="overall">
@@ -97,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="language">
+            <div class="language" data-percentage="50">
                 <p>React</p>
                 <div class="language_stats">
                     <div class="overall">
@@ -105,7 +106,7 @@
                     </div>
                 </div>
             </div>
-            <div class="language">
+            <div class="language" data-percentage="70">
                 <p>PHP</p>
                 <div class="language_stats">
                     <div class="overall">
@@ -113,7 +114,7 @@
                     </div>
                 </div>
             </div>
-            <div class="language">
+            <div class="language" data-percentage="60">
                 <p>Python</p>
                 <div class="language_stats">
                     <div class="overall">
@@ -204,5 +205,6 @@
             </div>
         </div> 
     </footer>
+    <script src="script.js" defer></script>
 </body>
 </html>
