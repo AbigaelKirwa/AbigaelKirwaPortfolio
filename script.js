@@ -1,3 +1,4 @@
+//this section is for the counter in numeric part of skills section
 let valueDisplays = document.querySelectorAll(".count");
 let interval = 1000;
 
@@ -45,55 +46,52 @@ valueDisplays.forEach(valueDisplay => {
     observer.observe(valueDisplay);
 });
 
-
+//this section is for the language progress bars
 document.addEventListener("DOMContentLoaded", function () {
     // Select all language elements
     let languageElements = document.querySelectorAll(".language");
 
     // Function to animate the loading effect
-function animateLoading(element) {
-    let overall = element.querySelector(".overall");
-    let current = element.querySelector(".current");
+    function animateLoading(element) {
+        let overall = element.querySelector(".overall");
+        let current = element.querySelector(".current");
 
-    // Get the specified percentage from the data-percentage attribute
-    let targetPercentage = parseInt(element.getAttribute("data-percentage"));
+        // Get the specified percentage from the data-percentage attribute
+        let targetPercentage = parseInt(element.getAttribute("data-percentage"));
 
-    // Check if the animation has already been triggered
-    if (element.getAttribute("data-animated") === "true") {
-        return;
-    }
-
-    // Calculate the step increment based on the target percentage and animation duration
-    let animationDuration = 1000; // You can adjust this value
-    let steps = 100; // Number of steps to reach 100%
-    let stepIncrement = targetPercentage / steps;
-
-    // Calculate the duration of each step
-    let stepDuration = animationDuration / steps;
-
-    // Set up an interval to update the current width
-    let currentWidth = 0;
-    let interval = setInterval(function () {
-        // Increment the current width
-        currentWidth += stepIncrement;
-
-        // Update the current width style
-        current.style.width = currentWidth + "%";
-
-        // Check if the current width reaches or exceeds the target percentage
-        if (currentWidth >= targetPercentage) {
-            // Set the width to the exact target percentage to ensure accuracy
-            current.style.width = targetPercentage + "%";
-
-            // Stop the interval when the target is reached
-            clearInterval(interval);
-
-            // Mark the element as animated
-            element.setAttribute("data-animated", "true");
+        // Check if the animation has already been triggered
+        if (element.getAttribute("data-animated") === "true") {
+            return;
         }
-    }, stepDuration); // Use the calculated duration for each step
-}
 
+        // Calculate the step increment based on the target percentage and animation duration
+        let animationDuration = 1000; 
+
+        // Set up an interval to update the current width
+        let currentWidth = 0;
+
+        function updateWidth(timestamp) {
+            if (!startTimestamp) {
+                startTimestamp = timestamp;
+            }
+
+            const elapsed = timestamp - startTimestamp;
+            const progress = Math.min(1, elapsed / animationDuration);
+
+            currentWidth = progress * targetPercentage;
+            current.style.width = currentWidth + "%";
+
+            if (progress < 1) {
+                requestAnimationFrame(updateWidth);
+            } else {
+                // Mark the element as animated
+                element.setAttribute("data-animated", "true");
+            }
+        }
+
+        let startTimestamp = null;
+        requestAnimationFrame(updateWidth);
+    }
 
     // Function to check if an element is in the viewport
     function isInViewport(element) {
