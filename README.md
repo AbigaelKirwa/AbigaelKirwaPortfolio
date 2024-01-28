@@ -1,4 +1,7 @@
 # Abigael Kirwa - Portfolio
+
+This is the link to my [portfolio](https://abigaelkirwa.github.io/AbigaelKirwaPortfolio/) It is deployed on GitHub pages.
+
 Welcome to my personal portfolio repository! This showcases my work, skills, and achievements as a web developer. The sections in the portfolio are:
 
 1) Home 
@@ -31,7 +34,3 @@ Clone the repo: git clone [https://github.com/AbigaelKirwa/AbigaelKirwaPortfolio
 Navigate to the repo: cd your-portfolio
 
 View locally by Opening index.html in your browser.
-
-
-
-
